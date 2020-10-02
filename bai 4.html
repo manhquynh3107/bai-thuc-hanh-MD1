@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Ve Circle Bang Canvas </title>
+</head>
+<body>
+<canvas id="myCircle" width="500" height="550" style="border:1px solid #000000;"></canvas>
+<script>
+    let X = 10;
+    let Y = 10;
+    let RADIUS = 100;
+    let Circle = function () {
+        this.radius = RADIUS;
+        this.cx = X;
+        this.cy = Y;
+        this.color = "#000000"
+        this.render = function () {
+            let c = document.getElementById("myCircle");
+            let ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = this.color;
+            ctx.arc(this.cx, this.cy, this.radius, 0, Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
+        }
+    }
+    let circle = new Circle();
+    circle.render()
+</script>
+</body>
+</html>

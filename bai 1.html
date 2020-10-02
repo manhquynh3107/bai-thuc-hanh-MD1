@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm Điểm Cao Nhất Trong Danh </title>
+</head>
+<body>
+<script>
+    let max = 0;
+    function findMax(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+    let arr = [4, 9, 7, 2, 10];
+    findMax(arr);
+    alert("Điểm Số Cao Nhất Trong Danh Sách Là:" + max);
+</script>
+</body>
+</html>
